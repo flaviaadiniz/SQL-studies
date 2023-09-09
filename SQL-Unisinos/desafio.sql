@@ -99,3 +99,20 @@ INSERT INTO Manutencao VALUES (1, 'IXW1234', DATE '2023-09-02', DATE '2023-09-03
 INSERT INTO Manutencao VALUES (2, 'ABC3972', DATE '2023-09-03', DATE '2023-09-06', 2500);
 INSERT INTO Manutencao VALUES (3, 'IRW0590', DATE '2023-05-10', DATE '2023-05-13', 1000);
 INSERT INTO Manutencao VALUES (4, 'IFD9988', DATE '2023-06-05', DATE '2023-06-15', 800);
+
+
+
+-- Cria a tabela Atividade
+CREATE TABLE Atividade(
+	id_manutencao INT NOT NULL,
+    descricao_atividade VARCHAR(100) NOT NULL,
+    valor DOUBLE PRECISION NOT NULL,
+	PRIMARY KEY(id_manutencao, descricao_atividade),
+    CONSTRAINT fk_manutencao_id_manutencao FOREIGN KEY (id_manutencao) REFERENCES Manutencao (id_manutencao)
+);
+
+-- Insere 4 entradas na tabela Atividade
+INSERT INTO Atividade VALUES (1, 'Troca de Óleo', 100);
+INSERT INTO Atividade VALUES (2, 'Troca de Pneus', 2400);
+INSERT INTO Atividade VALUES (3, 'Revisão Geral', 1200);
+INSERT INTO Atividade VALUES (4, 'Troca do Filtro do Ar Condicionado', 980); 
