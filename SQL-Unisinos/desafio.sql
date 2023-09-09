@@ -83,3 +83,19 @@ INSERT INTO Aluga VALUES (3, '11223344556', 'IRW0590', DATE '2023-08-01', DATE '
 INSERT INTO Aluga VALUES (4, '99664422112', 'IFD9988', DATE '2023-09-02', DATE '2023-09-04', 180);
 
 
+-- Cria a tabela Manutencao
+CREATE TABLE Manutencao(
+    id_manutencao INT NOT NULL,
+    veiculo_placa VARCHAR(10) NOT NULL,
+    data_inicial DATE NOT NULL,
+    data_final DATE NOT NULL,
+    custo DOUBLE PRECISION NOT NULL,
+    PRIMARY KEY(id_manutencao),
+    CONSTRAINT fk_manutencao_veiculo_placa FOREIGN KEY (veiculo_placa) REFERENCES Veiculo (placa)
+);
+
+-- Insere 4 entradas na tabela Manutencao
+INSERT INTO Manutencao VALUES (1, 'IXW1234', DATE '2023-09-02', DATE '2023-09-03', 100);
+INSERT INTO Manutencao VALUES (2, 'ABC3972', DATE '2023-09-03', DATE '2023-09-06', 2500);
+INSERT INTO Manutencao VALUES (3, 'IRW0590', DATE '2023-05-10', DATE '2023-05-13', 1000);
+INSERT INTO Manutencao VALUES (4, 'IFD9988', DATE '2023-06-05', DATE '2023-06-15', 800);
