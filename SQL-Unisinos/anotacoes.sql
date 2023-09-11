@@ -1,11 +1,11 @@
--- Cria uma Tabela
+-- Criar uma Tabela
 -- CREATE TABLE nome_tabela(
 -- nome_atributo TIPO,
 -- nome_atributo TIPO
 -- );
 
 
--- Remover a Tabela
+-- Remover uma Tabela
 -- DROP TABLE nome_tabela;
 
 
@@ -23,6 +23,4 @@
 
 
 -- Inserir Dados em uma Tabela
--- INSERT INTO nome_tabela VALUES (
---     
--- )
+-- INSERT INTO nome_tabela VALUES ()

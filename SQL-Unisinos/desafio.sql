@@ -83,6 +83,7 @@ INSERT INTO Aluga VALUES (3, '11223344556', 'IRW0590', DATE '2023-08-01', DATE '
 INSERT INTO Aluga VALUES (4, '99664422112', 'IFD9988', DATE '2023-09-02', DATE '2023-09-04', 180);
 
 
+
 -- Cria a tabela Manutencao
 CREATE TABLE Manutencao(
     id_manutencao INT NOT NULL,
